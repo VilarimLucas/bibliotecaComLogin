@@ -39,36 +39,37 @@
                                 Cadastrar Livros
                             </button>
                         </li>
-                        <li><a href="http://localhost:8080/biblioteca/admin/autores/listarAutores.jsp" class="dropdown-item">Listar Livros</a></li>
+                        <li><a href="http://localhost:8080/biblioteca/admin/index.jsp" class="dropdown-item">Listar Livros</a></li>
 
-                        <li class="dropdown-submenu">
+                        <!--li class="dropdown-submenu">
                             <a class="dropdown-item test" tabindex="-1">Editar Livros<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <!--li class="dropdown-submenu">
+                                <li class="dropdown-submenu">
                                     <a class="test" href="#">Another dropdown <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#">3rd level dropdown</a></li>
                                         <li><a href="#">3rd level dropdown</a></li>
                                     </ul>
-                                </li-->
+                                </li>
                                 <li class="text-primary">Qual Autor deseja alterar?</li>
-                                    <%
-                                        try {
-                                            st = new Conexao().conectar().createStatement();
-                                            rs = st.executeQuery("Select * from tbautor order by nomeAutor ASC");
+                        <%
+                            /*
+                            try {
+                                st = new Conexao().conectar().createStatement();
+                                rs = st.executeQuery("Select * from tbautor order by nomeAutor ASC");
 
-                                            while (rs.next()) {
-                                                out.println("<li><hr class='dropdown-divider'></li>");
-                                                out.println("<li><a tabindex='-1' class='dropdown-item' href='http://localhost:8080/biblioteca/admin/autores/editarExcluirAutor.jsp?funcao=editar&id=" + rs.getString(1) + "'>" + rs.getString(2) + "</a></li>");
+                                while (rs.next()) {
+                                    out.println("<li><hr class='dropdown-divider'></li>");
+                                    out.println("<li><a tabindex='-1' class='dropdown-item' href='http://localhost:8080/biblioteca/admin/autores/editarExcluirAutor.jsp?funcao=editar&id=" + rs.getString(1) + "'>" + rs.getString(2) + "</a></li>");
 
-                                            }
-                                        } catch (Exception e) {
-                                            out.println(e);
-                                        }
-
-                                    %>
-                            </ul>
-                        </li>
+                                }
+                            } catch (Exception e) {
+                                out.println(e);
+                            }
+                             */
+                        %>
+                </ul>
+            </li-->
 
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item">Excluir Livro</a></li>
@@ -115,8 +116,8 @@
                             </ul>
                         </li>
 
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item disabled">Excluir Autor</a></li>
+                        <!--li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item disabled">Excluir Autor</a></li-->
                     </ul>
                 </li>
 
@@ -182,7 +183,7 @@
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form-->
-            <a href="sair.jsp"><i class="bi bi-box-arrow-right"></i></a>
+            <a href="http://localhost:8080/biblioteca/admin/sair.jsp"><i class="bi bi-box-arrow-right"></i></a>
         </div>
     </div>
 </nav>

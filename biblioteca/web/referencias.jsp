@@ -7,4 +7,5 @@
 <%@page import="java.sql.*"%>
 <%@page import="com.mysql.jdbc.Driver"%>
 <%@page import="config.Conexao"%>
+<%@page contentType="text/html; charset=ISO-8859-1" %>
 

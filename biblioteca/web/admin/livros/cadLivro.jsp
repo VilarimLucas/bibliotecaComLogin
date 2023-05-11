@@ -24,7 +24,7 @@
                     <%
                         try {
                             st = new Conexao().conectar().createStatement();
-                            rs = st.executeQuery("Select * from tbautor");
+                            rs = st.executeQuery("Select * from tbautor order by nomeAutor asc");
                             while (rs.next()) {
                                 out.println("<option value='" + rs.getString(1) + "'>" + rs.getString(2) + "</option>");
                             }
@@ -40,7 +40,7 @@
                     <%
                         try {
                             st = new Conexao().conectar().createStatement();
-                            rs = st.executeQuery("Select * from tbgenero");
+                            rs = st.executeQuery("Select * from tbgenero order by genero asc");
                             while (rs.next()) {
                                 out.println("<option value='" + rs.getString(1) + "'>" + rs.getString(2) + "</option>");
                             }
@@ -70,6 +70,40 @@
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-        <button type="submit" class="btn btn-primary" name="btnSalvar">Salvar Autor</button>
+        <button type="submit" class="btn btn-primary" name="btnSalvarLivro">Salvar Autor</button>
     </div>
 </form>
+
+<%
+    if (request.getParameter("btnSalvarLivro") != null) {
+    
+        String nomeLivro = request.getParameter("txtNomeLivro");
+        String autor = request.getParameter("txtAutor");
+        String genero = request.getParameter("txtGenero");
+        String ano = request.getParameter("txtAnoLancamento");
+        String edicao = request.getParameter("txtEdicao");
+        String descricao = request.getParameter("txtDescricao");
+        
+        try {
+            int cont = 0;
+            rs = st.executeQuery("Select * from tblivro");
+            while (rs.next()){
+            
+                if ((nomeLivro.equals(rs.getString(2)) && (autor.equals(rs.getString(3)))) == true) {
+                    cont++;
+                }
+            }
+            if (cont == 0) {
+                st = new Conexao().conectar().createStatement();
+                st.executeUpdate("insert into tblivro(nomeLivro, codAutor, codGenero, anoLancamento, edicaoLivro, descricaoLivro, statusLivro) values('" + nomeLivro + "', " + autor + ", " + genero + ", " + ano + ", '" + edicao + "', '" + descricao + "', 1)");
+            }
+            out.println("<meta http-equiv='refresh' content='0;URL=http://localhost:8080/biblioteca/admin/index.jsp'>");
+            out.println("<script type=\"text/javascript\">");
+            out.println("alert('Cadastro de Livro feito com sucesso!!');");
+            out.println("</script>");
+
+        } catch (Exception e) {
+            out.println(e);
+        }
+    }
+%>                

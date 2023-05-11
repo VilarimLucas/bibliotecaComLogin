@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <%@ include file="../../css/style.jsp" %>
         <title>Editar Autores</title>
     </head>
@@ -15,8 +16,7 @@
         <%@ include file="../header.jsp" %>
 
 
-        <%
-            String autor = null;
+        <%            String autor = null;
 
             String valorID = request.getParameter("id");
 
@@ -49,7 +49,7 @@
                     <form>
                         <div class="card border-secondary mb-3">
                             <div class="card-header">
-                                
+
                                 Editar Autor
                             </div>
                             <div class="card-body text-secondary">
@@ -73,6 +73,7 @@
                 </div><!-- </div> -->
             </div>
         </div>
+        <%@ include file="../footer.jsp" %>
     </body>
 </html>
 

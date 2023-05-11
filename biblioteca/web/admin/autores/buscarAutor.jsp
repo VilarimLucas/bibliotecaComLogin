@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <%@ include file="../../css/style.jsp" %>
         <title>Buscar Autores</title>
     </head>
@@ -37,8 +38,7 @@
                                 </thead>
                                 <tbody>
 
-                                    <%                                        
-                                        String busca = request.getParameter("buscar");
+                                    <%                                        String busca = request.getParameter("buscar");
                                         int contador = 0;
                                         try {
                                             rs = st.executeQuery("Select * from tbautor where nomeAutor like '%" + busca + "%'");
@@ -70,5 +70,7 @@
                 </div>
             </div>
         </div>
+
+        <%@ include file="../footer.jsp" %>
     </body>
 </html>

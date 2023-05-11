@@ -9,6 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <%@ include file="../../css/style.jsp" %>
         <title>Listar Autores</title>
     </head>
@@ -29,10 +30,10 @@
                         </div>
 
                         <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Digite o nome do Autor" aria-label="Recipient's username" aria-describedby="button-addon2" id="txtBuscarAutor" required>
-                                    <button class="btn btn-outline-secondary" onClick="redirecionarBusca()" id="button-addon2"><i class="bi bi-search"></i></button>
-                                </div>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Digite o nome do Autor" aria-label="Recipient's username" aria-describedby="button-addon2" id="txtBuscarAutor" required>
+                                <button class="btn btn-outline-secondary" onClick="redirecionarBusca()" id="button-addon2"><i class="bi bi-search"></i></button>
+                            </div>
                             <script>
                                 function redirecionarBusca() {
                                     var buscaAutor = document.getElementById('txtBuscarAutor').value;
@@ -52,8 +53,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <%
-                                try {
+                            <%                                try {
 
                                     st = new Conexao().conectar().createStatement();
 
@@ -88,7 +88,7 @@
         </div>
 
 
-
+        <%@ include file="../footer.jsp" %>
 
     </body>
 </html>

@@ -19,13 +19,13 @@
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-        <button type="submit" class="btn btn-primary" name="btnSalvar">Salvar Autor</button>
+        <button type="submit" class="btn btn-primary" name="btnSalvarGenero">Salvar Autor</button>
     </div>
 </form>
 
 <%
 
-    if (request.getParameter("btnSalvar") != null) {
+    if (request.getParameter("btnSalvarGenero") != null) {
         String genero = request.getParameter("txtGenero");
         try {
             int cont = 0;

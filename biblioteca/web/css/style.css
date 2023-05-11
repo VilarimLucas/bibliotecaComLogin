@@ -1,0 +1,125 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 11 de mai. de 2023, 00:13:20
+    Author     : vilar
+*/
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+}
+
+
+body{
+    background-color: #E1E3F1;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background-color: #941717 !important;
+}
+
+nav.navbar .container-fluid a.navbar-brand, nav.navbar .container-fluid a i.bi-box-arrow-right{
+    color: #C2D76D !important;
+}
+
+
+nav.navbar .container-fluid ul.navbar-nav li.nav-item a{
+    color: #E1E3F1 !important;
+
+}
+
+nav.navbar .container-fluid ul.navbar-nav li.nav-item ul.dropdown-menu a{
+    color: #000 !important;
+
+}
+
+nav.navbar .container-fluid ul.navbar-nav li.nav-item ul.dropdown-menu .dropdown-submenu .text-primary{
+    color: #941717 !important;
+    padding: 3%;
+
+}
+/* FIM NAVBAR */
+
+h1, h2, h3, h4, h5, h6, b{
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* TABELAS*/
+
+table{
+    border-color: #9B9B9B !important;
+}
+
+thead{
+    background-color: #9B9B9B !important;
+    color: #E1E3F1 !important;
+}
+
+/* FIM TABELAS */
+
+/* TELA DE LOGIN */
+.login {
+    background: none;
+    border:none;
+}
+.login .card-body form{
+    background-color: #941717 !important;
+    padding: 3rem;
+}
+.login .card-body form input.btn{
+    background-color: #C2D76D !important;
+}
+.login .card-body form label{
+    color: #E1E3F1 !important;
+}
+
+.login .card-body form h3 {
+    color: #C2D76D !important;
+}
+
+/* FIM TELA DE LOGIN */
+
+/* lISTA cDE lIVROS DO INDEX */
+
+.titulo-livro{
+    text-decoration: none;
+}
+.titulo-livro:hover{
+    color: #C2D76D !important;
+}
+
+/*FIM LISTA DE LIVROS DO INDEX*/
+
+
+/* FOOTER */
+
+footer{
+    background-color: #941717 !important;
+    color: #E1E3F1 !important;
+}
+
+footer div h5{
+    color: #C2D76D !important;
+}
+footer div.list-group a{
+    color: #E1E3F1 !important;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 1%;
+}
+footer .col-lg-3 {
+    border-left: 1px solid #fff;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+footer div.list-group a:hover{
+    color: #941717 !important;
+}
+
+/* FIM FOOTER */
