@@ -23,26 +23,6 @@ body{
     background-color: #941717 !important;
 }
 
-nav.navbar .container-fluid a.navbar-brand, nav.navbar .container-fluid a i.bi-box-arrow-right{
-    color: #C2D76D !important;
-}
-
-
-nav.navbar .container-fluid ul.navbar-nav li.nav-item a{
-    color: #E1E3F1 !important;
-
-}
-
-nav.navbar .container-fluid ul.navbar-nav li.nav-item ul.dropdown-menu a{
-    color: #000 !important;
-
-}
-
-nav.navbar .container-fluid ul.navbar-nav li.nav-item ul.dropdown-menu .dropdown-submenu .text-primary{
-    color: #941717 !important;
-    padding: 3%;
-
-}
 /* FIM NAVBAR */
 
 h1, h2, h3, h4, h5, h6, b{

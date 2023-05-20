@@ -8,7 +8,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
         <%@ include file="../../css/style.jsp" %>
         <title>Listar Generoes</title>
     </head>
@@ -47,8 +46,8 @@
                             <tr>
                                 <th>Código</th>
                                 <th>Gênero</th>
-                                <th>Editar</th>
-                                <th>Excluir</th>
+<!--                                <th>Editar</th>
+                                <th>Excluir</th>-->
                             </tr>
                         </thead>
                         <tbody>
@@ -61,8 +60,9 @@
                                     while (rs.next()) {
                                         out.println("<tr><td>" + rs.getString(1) + "</td>");
                                         out.println("<td>" + rs.getString(2) + "</td>");
-                                        out.println("<td><a href='./editarExcluirGenero.jsp?funcao=editar&id=" + rs.getString(1) + "' class='btn btn-primary disabled'><i class='bi bi-pencil-square'></i></a></td>");
-                                        out.println("<td><a href='./editarExcluirGenero.jsp?funcao=excluir&id=" + rs.getString(1) + "' class='btn btn-danger disabled'><i class='bi bi-trash'></i></a></td> </tr>");
+//                                        out.println("<td><a href='./editarExcluirGenero.jsp?funcao=editar&id=" + rs.getString(1) + "' class='btn btn-primary disabled'><i class='bi bi-pencil-square'></i></a></td>");
+//                                        out.println("<td><a href='./editarExcluirGenero.jsp?funcao=excluir&id=" + rs.getString(1) + "' class='btn btn-danger disabled'><i class='bi bi-trash'></i></a></td>"); 
+                                        out.println("</tr>");
                                     }
                                 } catch (Exception e) {
                                     out.println(e);

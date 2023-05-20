@@ -8,7 +8,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
         <%@ include file="../../css/style.jsp" %>
         <title>Buscar Autores</title>
     </head>
@@ -47,7 +46,7 @@
 
                                 int contador = 0;
                                 try {
-                                    rs = st.executeQuery("Select l.codLivro, l.nomeLivro, g.genero, a.nomeAutor from tblivro l inner join tbgenero g on g.codGenero = l.codLivro inner join tbautor a on a.codAutor = l.codAutor where " + coluna + " like '%" + busca + "%'");
+                                    rs = st.executeQuery("Select l.codLivro, l.nomeLivro, g.genero, a.nomeAutor from tblivro l inner join tbgenero g on g.codGenero = l.codGenero inner join tbautor a on a.codAutor = l.codAutor where statusLivro = 1 and " + coluna + " like '%" + busca + "%'");
                                     out.println("<div class='container text-center'>");
                                     out.println("<div class='row row-cols-1 row-cols-sm-2 row-cols-md-4'>");
                                     while (rs.next()) {

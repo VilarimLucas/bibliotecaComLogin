@@ -6,12 +6,10 @@
 
 <%@ include file="referencias.jsp" %>
 
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <html>
     <head>
-        <meta charset="UTF-8">
         <%@ include file="./css/style.jsp" %>
         <title>Biblioteca</title>
     </head>
@@ -26,16 +24,17 @@
                 <div class="col align-self-center">
                     <div class="card login">
                         <div class="card-body">
+                            
                             <form class="form-control">
                                 <div class="form-group text-center">
                                     <h3><i class="bi bi-door-open-fill"></i> LOGIN</h3>
                                     <!--<img src="img/logo.png" alt="70" width="170"/>-->                            
-                                    <label>Bem vindos ao Sistema de Bibliotecas <br> FAÃ‡A SILÃŠNCIO! <i class="bi bi-bell-slash"></i></label>
+                                    <label>Bem vindos ao Sistema de Bibliotecas <br> FAÇA SILÊNCIO!</label>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">UsuÃ¡rio</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" name="txtuser" placeholder="Digite o usuÃ¡rio" required>
+                                    <label for="exampleFormControlInput1" class="form-label">Usuário</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" name="txtuser" placeholder="Digite o usuário" required>
                                 </div>
 
                                 <div class="mb-3">
@@ -53,7 +52,7 @@
                                                 session.setAttribute("usuario", login);
                                                 session.setAttribute("nivel", rs.getString(3));
                                             } else {
-                                                out.println("<script>alert('Verifique o usuÃ¡rio ou senha')</script>");
+                                                out.println("<script>alert('Verifique o usuário ou senha')</script>");
                                             }
                                         }
 
@@ -61,6 +60,7 @@
                                 </div>
                                 <input type="submit" name="btnLog" value="Logar" id="btnLog" class="btn btn-block">
                             </form>
+                                
                         </div>
                     </div>
                 </div>

@@ -9,7 +9,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
         <%@ include file="../../css/style.jsp" %>
         <title>Buscar Gêneros</title>
     </head>
@@ -32,13 +31,14 @@
                                     <tr>
                                         <th>Código</th>
                                         <th>Gênero</th>
-                                        <th>Editar</th>
-                                        <th>Excluir</th>
+<!--                                        <th>Editar</th>
+                                        <th>Excluir</th>-->
                                     </tr>
                                 </thead>
                                 <tbody>
 
-                                    <%                                        String busca = request.getParameter("buscar");
+                                    <%
+                                        String busca = request.getParameter("buscar");
                                         int contador = 0;
                                         try {
                                             rs = st.executeQuery("Select * from tbgenero where genero like '%" + busca + "%'");
@@ -46,8 +46,9 @@
                                             while (rs.next()) {
                                                 out.println("<tr><td>" + rs.getString(1) + "</td>");
                                                 out.println("<td>" + rs.getString(2) + "</td>");
-                                                out.println("<td><a href='./editarExcluirGenero.jsp?funcao=editar&id=" + rs.getString(1) + "' class='btn btn-primary disabled'><i class='bi bi-pencil-square'></i></a></td>");
-                                                out.println("<td><a href='./editarExcluirGenero.jsp?funcao=excluir&id=" + rs.getString(1) + "' class='btn btn-danger disabled'><i class='bi bi-trash'></i></a></td> </tr>");
+//                                                out.println("<td><a href='./editarExcluirGenero.jsp?funcao=editar&id=" + rs.getString(1) + "' class='btn btn-primary disabled'><i class='bi bi-pencil-square'></i></a></td>");
+//                                                out.println("<td><a href='./editarExcluirGenero.jsp?funcao=excluir&id=" + rs.getString(1) + "' class='btn btn-danger disabled'><i class='bi bi-trash'></i></a></td>"); 
+                                                out.println("</tr>");
                                                 contador++;
                                             }
                                         } catch (Exception e) {

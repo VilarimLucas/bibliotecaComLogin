@@ -22,7 +22,7 @@
 
                             st = new Conexao().conectar().createStatement();
 
-                            rs = st.executeQuery("Select * from tblivro ORDER BY nomeLivro asc;");
+                            rs = st.executeQuery("Select * from tblivro where statusLivro = 1 ORDER BY nomeLivro asc;");
 
                             while (rs.next()) {
                                 out.println("<div class='col list-group'><a class='list-group-item list-group-item-action' href='http://localhost:8080/biblioteca/admin/livros/visLivro.jsp?visualizar=" + rs.getString(1) + "'>" + rs.getString(2) + "</a></div>");

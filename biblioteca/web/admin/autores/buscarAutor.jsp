@@ -8,7 +8,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
         <%@ include file="../../css/style.jsp" %>
         <title>Buscar Autores</title>
     </head>
@@ -33,7 +32,7 @@
                                         <th>Código</th>
                                         <th>Nome do Autor</th>
                                         <th>Editar</th>
-                                        <th>Excluir</th>
+<!--                                        <th>Excluir</th>-->
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -47,7 +46,8 @@
                                                 out.println("<tr><td>" + rs.getString(1) + "</td>");
                                                 out.println("<td>" + rs.getString(2) + "</td>");
                                                 out.println("<td><a href='./editarExcluirAutor.jsp?funcao=editar&id=" + rs.getString(1) + "' class='btn btn-primary'><i class='bi bi-pencil-square'></i></a></td>");
-                                                out.println("<td><a href='./editarExcluirAutor.jsp?funcao=excluir&id=" + rs.getString(1) + "' class='btn btn-danger disabled'><i class='bi bi-trash'></i></a></td> </tr>");
+//                                                out.println("<td><a href='./editarExcluirAutor.jsp?funcao=excluir&id=" + rs.getString(1) + "' class='btn btn-danger disabled'><i class='bi bi-trash'></i></a></td>"); 
+                                                out.println("</tr>");
                                                 contador++;
                                             }
                                         } catch (Exception e) {

@@ -8,7 +8,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
         <%@ include file="../css/style.jsp" %>
         <title>Biblioteca</title>
     </head>

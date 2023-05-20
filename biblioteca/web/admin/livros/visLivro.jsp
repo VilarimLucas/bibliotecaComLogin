@@ -8,7 +8,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
         <%@ include file="../../css/style.jsp" %>
         <title>Livro</title>
     </head>
@@ -56,7 +55,7 @@
                                     <p class="card-text"><b>Ano: </b><%=ano%></p>
                                     <p class="card-text"><b>Edição: </b><%=edicao%></p>
                                     <p class="card-text"><b>Descrição: </b><%=descricao%></p>
-                                    <p class="card-text"><small class="text-body-secondary"></small></p>
+                                    <p class="card-text"><small class="text-body-secondary"><a href="./editarExcluirLivro.jsp?funcao=excluir&id=<%=codLivro%>" class='btn btn-danger'><i class='bi bi-trash'></i> Excluir Livro</a></small></p>
                                 </div>
                             </div>
                         </div>
