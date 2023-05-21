@@ -3,7 +3,6 @@
     Created on : 6 de mai. de 2023, 14:39:29
     Author     : vilar
 --%>
-
 <%
     Statement st = null;
     ResultSet rs = null;
@@ -88,22 +87,24 @@
                     <a class="nav-link dropdown-toggle"  name="btnGeneros" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gêneros</a>
                     <ul class="dropdown-menu">
                         <li><button type="button" class="btn btn-primary dropdown-item" data-bs-toggle="modal" data-bs-target="#CadastrarGenero">Cadastrar Gênero</button></li>
-                        <li><a href="http://localhost:8080/biblioteca/admin/genero/listarGeneros.jsp" class="dropdown-item">Listar Gêneros</a></li>
+                        <li><a href="http://localhost:8080/biblioteca/admin/genero/listarGeneros.jsp" class="dropdown-item"> Listar Gêneros</a></li>
                     </ul>
                 </li>
 
             </ul>
 
             <div class="dropdown-center">
+
+                <!-- Usuário -->
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-person-fill-gear"></i> Gerenciador de Usuários
+
+                    <i class="bi bi-person-fill-gear"></i>Gerenciamento de Usuário
                 </button>
                 <ul class="dropdown-menu">
-
                     <li><button name="btnAutores" type="button" class="btn btn-primary dropdown-item" data-bs-toggle="modal" data-bs-target="#CadastrarUsuario"><i class="bi bi-person-add"></i> Cadastrar Usuário</button></li>
-                    <li><a href="http://localhost:8080/biblioteca/admin/autores/listarAutores.jsp" class="dropdown-item">Listar Usuários</a></li>
+                    <li><a href="http://localhost:8080/biblioteca/admin/usuarios/listarUsuarios.jsp" class="dropdown-item"><i class="bi bi-person-lines-fill"></i> Listar Usuários</a></li>
                     <li class="dropdown-submenu">
-                        <a class="dropdown-item test" tabindex="-1">Editar Usuário<span class="caret"></span></a>
+                        <a class="dropdown-item test disabled" tabindex="-1">Editar Usuário<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li class="text-primary">Qual Autor deseja alterar?</li>
                                 <%                                        try {

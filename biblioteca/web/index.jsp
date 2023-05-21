@@ -24,7 +24,7 @@
                 <div class="col align-self-center">
                     <div class="card login">
                         <div class="card-body">
-                            
+
                             <form class="form-control">
                                 <div class="form-group text-center">
                                     <h3><i class="bi bi-door-open-fill"></i> LOGIN</h3>
@@ -48,9 +48,11 @@
                                             st = new Conexao().conectar().createStatement();
                                             rs = st.executeQuery("select * from tbusuario where usuario ='" + login + "' and senha='" + pass + "'");
                                             if (rs.next()) {
+                                                request.setAttribute("usuario", rs.getString(1));
+                                                request.setAttribute("nivel", rs.getString(3));
                                                 response.sendRedirect("./admin/index.jsp");
-                                                session.setAttribute("usuario", login);
-                                                session.setAttribute("nivel", rs.getString(3));
+//                                                session.setAttribute("usuario", login);
+//                                                session.setAttribute("nivel", rs.getString(3));
                                             } else {
                                                 out.println("<script>alert('Verifique o usuário ou senha')</script>");
                                             }
@@ -60,7 +62,7 @@
                                 </div>
                                 <input type="submit" name="btnLog" value="Logar" id="btnLog" class="btn btn-block">
                             </form>
-                                
+
                         </div>
                     </div>
                 </div>

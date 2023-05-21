@@ -23,6 +23,14 @@ body{
     background-color: #941717 !important;
 }
 
+.navbar .container-fluid a.navbar-brand{
+    color: #C2D76D;
+}
+
+.navbar .container-fluid .navbar-collapse ul.navbar-nav li.nav-item a.nav-link{
+    color: #fff;
+}
+
 /* FIM NAVBAR */
 
 h1, h2, h3, h4, h5, h6, b{

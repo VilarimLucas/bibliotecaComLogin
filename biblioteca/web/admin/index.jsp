@@ -20,7 +20,7 @@
                     <div class="row">
                         <div class="col-sm-5 col-md-6">
                             <div style="float:left">
-                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#cadastrarLivro">
+                                <button type="button" class="btn btn-success hidden" data-bs-toggle="modal" data-bs-target="#cadastrarLivro">
                                     <i class="bi bi-plus-circle"></i>
                                 </button>
                             </div>
