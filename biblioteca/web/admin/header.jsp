@@ -100,7 +100,7 @@
                 </button>
                 <ul class="dropdown-menu">
 
-                    <li><button name="btnAutores" type="button" class="btn btn-primary dropdown-item" data-bs-toggle="modal" data-bs-target="#CadastrarUsuaroio"><i class="bi bi-person-add"></i> Cadastrar Usuário</button></li>
+                    <li><button name="btnAutores" type="button" class="btn btn-primary dropdown-item" data-bs-toggle="modal" data-bs-target="#CadastrarUsuario"><i class="bi bi-person-add"></i> Cadastrar Usuário</button></li>
                     <li><a href="http://localhost:8080/biblioteca/admin/autores/listarAutores.jsp" class="dropdown-item">Listar Usuários</a></li>
                     <li class="dropdown-submenu">
                         <a class="dropdown-item test" tabindex="-1">Editar Usuário<span class="caret"></span></a>
