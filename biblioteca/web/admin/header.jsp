@@ -98,11 +98,12 @@
                 <!-- Usuário -->
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 
-                    <i class="bi bi-person-fill-gear"></i>Gerenciamento de Usuário
+                    <i class="bi bi-person-fill-gear"></i> 
+                    Gerenciamento de Usuário
                 </button>
                 <ul class="dropdown-menu">
-                    <li><button name="btnAutores" type="button" class="btn btn-primary dropdown-item" data-bs-toggle="modal" data-bs-target="#CadastrarUsuario"><i class="bi bi-person-add"></i> Cadastrar Usuário</button></li>
-                    <li><a href="http://localhost:8080/biblioteca/admin/usuarios/listarUsuarios.jsp" class="dropdown-item"><i class="bi bi-person-lines-fill"></i> Listar Usuários</a></li>
+                    <li id="cadUsu"><button name="btnCadUsuario" type="button" class="btn btn-primary dropdown-item" data-bs-toggle="modal" data-bs-target="#CadastrarUsuario"><i class="bi bi-person-add"></i> Cadastrar Usuário</button></li>
+                    <li  id="listaUsu"><a href="http://localhost:8080/biblioteca/admin/usuarios/listarUsuarios.jsp" class="dropdown-item"><i class="bi bi-person-lines-fill"></i> Listar Usuários</a></li>
                     <li class="dropdown-submenu">
                         <a class="dropdown-item test disabled" tabindex="-1">Editar Usuário<span class="caret"></span></a>
                         <ul class="dropdown-menu">

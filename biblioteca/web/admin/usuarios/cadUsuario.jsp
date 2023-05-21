@@ -41,10 +41,11 @@
 
 
 <%
+
     if (request.getParameter("btnSalvarUsuario") != null) {
         String usuario = request.getParameter("txtUsuario");
         String senha = request.getParameter("txtSenha");
-        String nivel = request.getParameter("txtNivel");
+        String status = request.getParameter("txtNivel");
         try {
             int cont = 0;
             rs = st.executeQuery("Select * from tbusuario");
@@ -57,7 +58,7 @@
             out.println("<script type=\"text/javascript\">");
             if (cont == 0) {
                 st = new Conexao().conectar().createStatement();
-                st.executeUpdate("insert into tbusuario(usuario, senha, nivel) values('" + usuario + "', '" + senha + "', " + nivel + ")");
+                st.executeUpdate("insert into tbusuario(usuario, senha, nivel) values('" + usuario + "', '" + senha + "', " + status + ")");
 
                 out.println("alert('Cadastro de Usuário " + usuario + " feito com sucesso!!');");
 

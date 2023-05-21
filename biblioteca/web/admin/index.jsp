@@ -5,6 +5,7 @@
 --%>
 
 <%@ include file="../referencias.jsp" %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,7 +13,9 @@
         <title>Biblioteca</title>
     </head>
     <body>
+        
         <%@ include file="header.jsp" %>
+        <%@ include file="testaSessao.jsp" %>
         <br>
         <div class="container text-center">
             <div class="row">
@@ -20,7 +23,7 @@
                     <div class="row">
                         <div class="col-sm-5 col-md-6">
                             <div style="float:left">
-                                <button type="button" class="btn btn-success hidden" data-bs-toggle="modal" data-bs-target="#cadastrarLivro">
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#cadastrarLivro">
                                     <i class="bi bi-plus-circle"></i>
                                 </button>
                             </div>

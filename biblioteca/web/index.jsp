@@ -48,11 +48,10 @@
                                             st = new Conexao().conectar().createStatement();
                                             rs = st.executeQuery("select * from tbusuario where usuario ='" + login + "' and senha='" + pass + "'");
                                             if (rs.next()) {
-                                                request.setAttribute("usuario", rs.getString(1));
-                                                request.setAttribute("nivel", rs.getString(3));
+
                                                 response.sendRedirect("./admin/index.jsp");
-//                                                session.setAttribute("usuario", login);
-//                                                session.setAttribute("nivel", rs.getString(3));
+                                                session.setAttribute("usuario", login);
+                                                session.setAttribute("nivel", rs.getString(3));
                                             } else {
                                                 out.println("<script>alert('Verifique o usuário ou senha')</script>");
                                             }

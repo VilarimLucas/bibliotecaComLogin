@@ -19,23 +19,17 @@
                 <div class="col">
                     <br>
                     <div class="row">
-                        <div class="col-sm-5 col-md-6">
-                            <div style="float:left">
-                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    <i class="bi bi-plus-circle"></i>
-                                </button>
-                            </div>
-                        </div>
+                        <div class="col-sm-5 col-md-6"></div>
 
                         <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Digite o nome do Gênero" aria-label="Recipient's username" aria-describedby="button-addon2" id="txtBuscarGenero" required>
+                                <input type="text" class="form-control" placeholder="Digite o nome de usuário" aria-label="Recipient's username" aria-describedby="button-addon2" id="txtBuscarUsuario" required>
                                 <button class="btn btn-outline-secondary" onClick="redirecionarBusca()" id="button-addon2"><i class="bi bi-search"></i></button>
                             </div>
                             <script>
                                 function redirecionarBusca() {
-                                    var buscaGenero = document.getElementById('txtBuscarGenero').value;
-                                    window.location.href = 'http://localhost:8080/biblioteca/admin/genero/buscarGenero.jsp?buscar=' + encodeURIComponent(buscaGenero);
+                                    var busca = document.getElementById('txtBuscarUsuario').value;
+                                    window.location.href = 'http://localhost:8080/biblioteca/admin/usuarios/buscarUsuario.jsp?buscar=' + encodeURIComponent(busca);
                                 }
                             </script>
                         </div>
@@ -46,8 +40,6 @@
                             <tr>
                                 <th>Usuário</th>
                                 <th>Nível de acesso</th>
-<!--                                <th>Editar</th>
-                                <th>Excluir</th>-->
                             </tr>
                         </thead>
                         <tbody>
@@ -55,13 +47,22 @@
 
                                     st = new Conexao().conectar().createStatement();
 
-                                    rs = st.executeQuery("Select * from tbgenero ORDER BY codGenero DESC;");
+                                    rs = st.executeQuery("Select * from tbusuario");
 
                                     while (rs.next()) {
                                         out.println("<tr><td>" + rs.getString(1) + "</td>");
-                                        out.println("<td>" + rs.getString(2) + "</td>");
-//                                        out.println("<td><a href='./editarExcluirGenero.jsp?funcao=editar&id=" + rs.getString(1) + "' class='btn btn-primary disabled'><i class='bi bi-pencil-square'></i></a></td>");
-//                                        out.println("<td><a href='./editarExcluirGenero.jsp?funcao=excluir&id=" + rs.getString(1) + "' class='btn btn-danger disabled'><i class='bi bi-trash'></i></a></td>"); 
+                                        switch (rs.getString(3)) {
+                                            case "1":
+                                                out.println("<td>Admin</td>");
+                                                break;
+                                            case "2":
+                                                out.println("<td>Intermediário</td>");
+                                                break;
+                                            case "3":
+                                                out.println("<td>Limitado</td>");
+                                                break;
+                                        }
+
                                         out.println("</tr>");
                                     }
                                 } catch (Exception e) {
@@ -74,18 +75,6 @@
                 </div>
             </div><!-- comment -->
         </div>
-
-
-
-        <!-- Modal Cadastrar Genero-->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <%@ include file="./cadGenero.jsp" %>
-                </div>
-            </div>
-        </div>
-
 
         <%@ include file="../footer.jsp" %>
 
