@@ -15,7 +15,7 @@
     <body>
         
         <%@ include file="../header.jsp" %>
-
+        <%@ include file="../testaSessao.jsp" %>
         <div class="container text-center">
             <div class="row">
                 <div class="col-md-6 offset-md-3">

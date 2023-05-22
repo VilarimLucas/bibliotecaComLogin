@@ -13,7 +13,7 @@
     <body>
 
         <%@ include file="../header.jsp" %>
-
+        <%@ include file="../testaSessao.jsp" %>
 
         <%            String autor = null;
 

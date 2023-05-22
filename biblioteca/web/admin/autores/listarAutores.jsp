@@ -14,7 +14,7 @@
     </head>
     <body>
         <%@ include file="../header.jsp" %>
-
+        <%@ include file="../testaSessao.jsp" %>
         <div class="container text-center">
             <div class="row">
                 <div class="col">

@@ -13,14 +13,14 @@
     </head>
     <body>
         <%@ include file="../header.jsp" %>
-
+        <%@ include file="../testaSessao.jsp" %>
         <div class="container text-center">
             <div class="row">
                 <div class="col">
                     <br>
                     <div class="row">
                         <div class="col-sm-5 col-md-6">
-                            <div style="float:left">
+                            <div style="float:left" id="btnCadGen">
                                 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     <i class="bi bi-plus-circle"></i>
                                 </button>
@@ -46,8 +46,8 @@
                             <tr>
                                 <th>Código</th>
                                 <th>Gênero</th>
-<!--                                <th>Editar</th>
-                                <th>Excluir</th>-->
+                                <!--                                <th>Editar</th>
+                                                                <th>Excluir</th>-->
                             </tr>
                         </thead>
                         <tbody>

@@ -14,6 +14,7 @@
     <body>
 
         <%@ include file="../header.jsp" %>
+        <%@ include file="../testaSessao.jsp" %>
         <br>
         <div class="container text-center">
             <div class="row">

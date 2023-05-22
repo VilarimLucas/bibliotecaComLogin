@@ -86,44 +86,22 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle"  name="btnGeneros" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gêneros</a>
                     <ul class="dropdown-menu">
-                        <li><button type="button" class="btn btn-primary dropdown-item" data-bs-toggle="modal" data-bs-target="#CadastrarGenero">Cadastrar Gênero</button></li>
+                        <li id="navCadGen" class="navCadGen"><button type="button" class="btn btn-primary dropdown-item" data-bs-toggle="modal" data-bs-target="#CadastrarGenero">Cadastrar Gênero</button></li>
                         <li><a href="http://localhost:8080/biblioteca/admin/genero/listarGeneros.jsp" class="dropdown-item"> Listar Gêneros</a></li>
                     </ul>
                 </li>
-
             </ul>
-
             <div class="dropdown-center">
 
                 <!-- Usuário -->
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-
                     <i class="bi bi-person-fill-gear"></i> 
                     Gerenciamento de Usuário
                 </button>
                 <ul class="dropdown-menu">
                     <li id="cadUsu"><button name="btnCadUsuario" type="button" class="btn btn-primary dropdown-item" data-bs-toggle="modal" data-bs-target="#CadastrarUsuario"><i class="bi bi-person-add"></i> Cadastrar Usuário</button></li>
                     <li  id="listaUsu"><a href="http://localhost:8080/biblioteca/admin/usuarios/listarUsuarios.jsp" class="dropdown-item"><i class="bi bi-person-lines-fill"></i> Listar Usuários</a></li>
-                    <li class="dropdown-submenu">
-                        <a class="dropdown-item test disabled" tabindex="-1">Editar Usuário<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li class="text-primary">Qual Autor deseja alterar?</li>
-                                <%                                        try {
-                                        st = new Conexao().conectar().createStatement();
-                                        rs = st.executeQuery("Select * from tbautor order by nomeAutor ASC");
 
-                                        while (rs.next()) {
-                                            out.println("<li><hr class='dropdown-divider'></li>");
-                                            out.println("<li><a tabindex='-1' class='dropdown-item' href='http://localhost:8080/biblioteca/admin/autores/editarExcluirAutor.jsp?funcao=editar&id=" + rs.getString(1) + "'>" + rs.getString(2) + "</a></li>");
-                                        }
-                                    } catch (Exception e) {
-                                        out.println(e);
-                                    }
-                                %>
-                        </ul>
-                    </li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item disabled">Excluir Usuário</a></li>
                     <li><a class="dropdown-item test" href="http://localhost:8080/biblioteca/admin/sair.jsp"><i class="bi bi-box-arrow-right"></i> Sair</a></li>
 
                 </ul>

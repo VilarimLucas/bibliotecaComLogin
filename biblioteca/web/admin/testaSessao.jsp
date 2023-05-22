@@ -14,19 +14,22 @@
         out.println("const list = document.getElementById('listaUsu');");
         out.println("cad.className += 'd-none';");
         out.println("list.className += 'd-none';");
+        
         out.println("</script>");
     } else if (usu != null && nivel.equals("3")) {
         out.println("<script type=\"text/javascript\">");
+        
         // Campos em que o usuário não pode acessar em Ger usuário
         out.println("const cadUsu = document.getElementById('cadUsu');");
         out.println("const listUsu = document.getElementById('listaUsu');");
-        
-        // campos que o usuário limitado não pode acessar no Gerenciamento de Gênero
-        out.println("const btnCadGen = document.getElementById('btnCadGen');");
-        out.println("const navCadGen = document.getElementById('navCadGen');");
-        
         out.println("cadUsu.className += 'd-none';");
         out.println("listUsu.className += 'd-none';");
+        
+        // campos que o usuário limitado não pode acessar no Gerenciamento de Gênero
+        out.println("const btnCadGenero = document.getElementById('btnCadGen');");
+        out.println("const navCadGenero = document.getElementById('navCadGen');");
+        out.println("btnCadGenero.className += 'd-none';");
+        out.println("navCadGenero.className += 'd-none';");
         out.println("</script>");
     }
 %>
